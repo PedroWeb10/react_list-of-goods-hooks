@@ -24,7 +24,6 @@ enum SortType {
 export const App: React.FC = () => {
   const [goods, setGoods] = useState(goodsFromServer);
 
-
   const handleSort = (type: SortType) => {
     let sortedGoods = [...goods];
 
