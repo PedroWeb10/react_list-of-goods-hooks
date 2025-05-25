@@ -35,7 +35,7 @@ export const App: React.FC = () => {
         sortedGoods = [...goodsFromServer].sort((a, b) => a.length - b.length);
         break;
       case SortType.Reverse:
-        sortedGoods = [...goodsFromServer].reverse();
+        sortedGoods = [...goods].reverse();
         break;
       default:
         sortedGoods = goodsFromServer;
