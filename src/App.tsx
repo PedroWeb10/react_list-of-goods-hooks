@@ -25,17 +25,17 @@ export const App: React.FC = () => {
   const [goods, setGoods] = useState(goodsFromServer);
 
   const handleSort = (type: SortType) => {
-    let sortedGoods = [...goods];
+    let sortedGoods = [...goodsFromServer];
 
     switch (type) {
       case SortType.Alphabetical:
-        sortedGoods = [...goods].sort();
+        sortedGoods = [...goodsFromServer].sort();
         break;
       case SortType.Length:
-        sortedGoods = [...goods].sort((a, b) => a.length - b.length);
+        sortedGoods = [...goodsFromServer].sort((a, b) => a.length - b.length);
         break;
       case SortType.Reverse:
-        sortedGoods = [...goods].reverse();
+        sortedGoods = [...goodsFromServer].reverse();
         break;
       default:
         sortedGoods = goodsFromServer;
